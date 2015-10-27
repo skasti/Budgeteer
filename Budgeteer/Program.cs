@@ -11,6 +11,9 @@ namespace Budgeteer
     {
         static IEnumerable<IController> Controllers = new List<IController>
         {
+            new MenuController(),
+            new OverviewController(),
+            new AddAccountController()
         };
 
         static IController currentController;
@@ -30,6 +33,8 @@ namespace Budgeteer
 
         static void Main(string[] args)
         {
+            Program.ChangeController("Menu", true);
+            SwapControllers();
 
             var running = true;
 
