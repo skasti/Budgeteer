@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Accounting.Extensions
 {
-    public static class State
+    public static class StateExtensions
     {
         public static IEnumerable<Transaction> GetIncome(this Account account, IEnumerable<Transaction> transactions, DateTime from, DateTime to)
         {
@@ -27,13 +27,13 @@ namespace Accounting.Extensions
         public static double GetBalance(this Account account, IEnumerable<Transaction> transactions, DateTime time)
         {
             return 
-                account.GetIncome(transactions, DateTime.Min, time).Select(t => t.Amount).Sum() - 
-                account.GetExpence(transactions, DateTime.Min, time).Select(t => t.Amount).Sum();
+                account.GetIncome(transactions, DateTime.MinValue, time).Select(t => t.Amount).Sum() - 
+                account.GetExpence(transactions, DateTime.MinValue, time).Select(t => t.Amount).Sum();
         }
 
         public static double GetBalance(this IEnumerable<Transaction> transactions, Account account, DateTime time)
         {
-
+            return account.GetBalance(transactions, time);
         }
     }
 }
