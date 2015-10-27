@@ -41,11 +41,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BudgeteerData.cs" />
+    <Compile Include="Controllers\AddAccountController.cs" />
+    <Compile Include="Controllers\IController.cs" />
+    <Compile Include="Controllers\MenuController.cs" />
+    <Compile Include="Controllers\OverviewController.cs" />
+    <Compile Include="Import\Data\CsvEntry.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="input\brukskonto.csv" />
+    <None Include="input\buffer.csv" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Accounting\Accounting.csproj">
+      <Project>{17b9c58c-5bdf-428c-a652-4d340fd7bd66}</Project>
+      <Name>Accounting</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Views\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
