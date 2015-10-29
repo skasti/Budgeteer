@@ -44,6 +44,7 @@
     <Compile Include="BudgeteerData.cs" />
     <Compile Include="Controllers\AddAccountController.cs" />
     <Compile Include="Controllers\IController.cs" />
+    <Compile Include="Controllers\LoadTransactionsController.cs" />
     <Compile Include="Controllers\MenuController.cs" />
     <Compile Include="Controllers\OverviewController.cs" />
     <Compile Include="Import\Data\CsvEntry.cs" />
@@ -52,8 +53,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="input\brukskonto.csv" />
-    <None Include="input\buffer.csv" />
+    <Content Include="input\brukskonto.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="input\buffer.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Accounting\Accounting.csproj">
