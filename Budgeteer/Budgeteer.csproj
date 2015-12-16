@@ -48,6 +48,9 @@
     <Compile Include="Controllers\MenuController.cs" />
     <Compile Include="Controllers\OverviewController.cs" />
     <Compile Include="Import\Data\CsvEntry.cs" />
+    <Compile Include="Import\PreProcessors\CreditCardPreprocessor.cs" />
+    <Compile Include="Import\PreProcessors\DebetCardPreprocessor.cs" />
+    <Compile Include="Import\PreProcessors\IPreprocessCsvEntries.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

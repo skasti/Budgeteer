@@ -9,7 +9,7 @@ namespace Budgeteer
 {
     public class BudgeteerData
     {
-        public static IList<Transaction> Transactions = new List<Transaction>();
-        public static IList<Account> Accounts = new List<Account>();
+        public static List<Transaction> Transactions = new List<Transaction>();
+        public static List<Account> Accounts = new List<Account>();
     }
 }

@@ -17,7 +17,7 @@ namespace Budgeteer
         static IController nextController;
         static bool resetNext = false;
 
-        public static void ChangeController(string controllerName, bool reset)
+        public static void ChangeController(string controllerName, bool reset = true)
         {
             var controller = Controllers.FirstOrDefault(c => c.Name == controllerName);
 

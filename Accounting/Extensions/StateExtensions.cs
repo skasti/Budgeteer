@@ -35,5 +35,15 @@ namespace Accounting.Extensions
         {
             return account.GetBalance(transactions, time);
         }
+
+        public static IEnumerable<Transaction> GetExpence(this IEnumerable<Transaction> transactions, Account account, DateTime from, DateTime to)
+        {
+            return account.GetExpence(transactions, from, to);
+        }
+
+        public static IEnumerable<Transaction> GetIncome(this IEnumerable<Transaction> transactions, Account account, DateTime from, DateTime to)
+        {
+            return account.GetIncome(transactions, from, to);
+        }
     }
 }
